@@ -19,12 +19,11 @@ jobs:
 
       - name: Add upstream
         run: |
-          git remote add upstream https://github.com/openaps/AndroidAPSdocs.git
+          git remote add upstream https://github.com/nightscout/AndroidAPS.git
           git fetch upstream
 
       - name: Merge upstream into fork
         run: |
-          # Change "master" to "main" if your fork uses main
           git checkout master
           git merge --no-edit upstream/master
 
